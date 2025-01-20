@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Layout geral */
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047;
+    overflow-y: hidden;
+    background-image: linear-gradient(110deg, rgb(255, 255, 255) 60%, rgb(70, 5, 5) 60%);
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.page {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.itensForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.itensEsquerda, .itensDireita{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+#logo{
+    opacity: 60%;
+}
+
+.formCadastro {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    margin-left: 50px;
+}
+
+.containerLogo_media{
+    display: none;
+}
+
+/* Elementos internos formCadastro */
+.container_topo_form{
+    display: flex;
+    width: 100%;
+}
+
+#voltar-img{
+    height: 36px;
+    width: 36px;
+    background-color: rgb(70, 5, 5);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#link-voltar{
+    display: flex;
+    width: fit-content;
+}
+
+#link-voltar:visited{
+    color: black;
+}
+
+.container_topo_form > h1{
+    width: 100%;
+    display: flex;
+    margin-left: 10%;
+}
+
+
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+}
+
+
+.formCadastro p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.formCadastro input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+.formCadastro label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formCadastro a {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: #555;
+    transition: all linear 160ms;
+}
+
+.formCadastro a:hover {
+    color: rgb(70, 5, 5);
+}
+
+.btn {
+    background-color: rgb(70, 5, 5);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    margin-top: 19px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #be072f;
+}
+
+/*Estilos de verificação dos inputs*/
+
+.Correto{
+    border-color: #008000 !important;
+}
+
+.Incorreto{
+    border-color: #ff0000 !important;
+}
+
+.label_email::after, .confSenha_label::after, .senha_label::after, .cpf_label::after, .telefone_label::after, .dataNasc_label::after, .usuario_label::after{
+    color: red;
+    content: ' *' !important;
+}
+
+
+/*Alerta de inputs vazios*/
+.containerAlerta{
+    background-color: rgba(255, 255, 255, 0.301);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+}
+
+.alerta{
+    height: 300px;
+    width: 380px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+}
+
+.itensAlerta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.itensAlerta > input{
+    width: 300px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(70, 5, 5);
+    color: white;
+    height: 30px;
+    transition: all linear 120ms;
+}
+.itensAlerta > h1{
+    text-align: center;
+}
+
+.itensAlerta > input:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #be072f;
+}
+
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 1200px){
+    .formCadastro{
+        margin: 0px;
+    }
+    .page{
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerLogo{
+        display: none;
+    }
+    
+    .container_topo_form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .containerLogo_media{
+        display: block;
+        background-color: rgb(70, 5, 5);
+        width: 50px;
+        height: 50px;
+    }
+    #logo_media{
+        width: 50px;
+        height: 50px;
+    }
+
+    .containerAlerta{
+        background-color: transparent;
+    }
+
+    #voltar-img{
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    body{
+        overflow-y: auto;
+    }
+    .page{
+        height: fit-content;
+        align-items: center;
+    }
+    .formCadastro{
+        height: fit-content;
+    }
+}
+
+
+@media screen and (max-height: 685px) {
+    html{
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 550px){
+    body{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to left, white 60%, white 60%);
+    }
+
+    .page{
+        height: fit-content;
+        width: 100%;
+        align-items: center;
+    }
+
+    .formCadastro{
+        width: 100% !important;
+        height: fit-content !important;
+        padding: 13px !important;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        border: none;
+        box-shadow: none;
+    }
+
+    .container_topo_form{
+        justify-content: space-between;
+    }
+
+    .itensForm{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .containerLogo_media{
+        width: 50px;
+        height: 50px;
+    }
+
+    #logo_media{
+        width: 50px;
+        height: 50px;
+    }
+    .formCadastro h1 {
+        padding: 0  !important;
+        margin: 0  !important;
+        font-weight: normal  !important;
+        font-size: 13px  !important;
+    }
+    
+    .formCadastro p {
+        font-size: 10px !important;
+        margin: 0px !important;
+    }
+    
+    .formCadastro input {
+        padding: 0px !important;
+        font-size: 13px !important;
+        margin: 5px !important;
+        border-radius: 3px !important;
+        height: 30px;
+    }
+    
+    .formCadastro label {
+        font-size: 13px !important;
+        font-weight: normal !important;
+        margin: 3px;
+    }
+    
+    .formCadastro a {
+        text-align: center !important;
+        margin-bottom: 0px !important;
+        font-size: 13px !important;
+    }
+    
+    .btn {
+        font-size: 13px !important;
+        font-weight: normal !important;
+        margin: 0 !important;
+        margin-top: 0px  !important;
+    }
+    
+    .btn:hover {
+        transform: scale(1) !important;
+        background-color: #be072f;
+    }
+
+    /*ALERTA*/
+    .containerAlerta{
+        width: 100% !important;
+        height: 100% !important;
+        background-color: transparent;
+    }
+    
+    .alerta{
+        height: 150px !important;
+        width: 190px !important;
+        border-radius: 4px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        padding: 15px;
+    }
+    
+    .itensAlerta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+    }
+    .itensAlerta > input{
+        width: 150px;
+        border-radius: 2px;
+        height: 15px;
+    }
+    
+    .itensAlerta > input:hover{
+        transform: scale(1);
+    }
+
+    .itensAlerta h1{
+        font-size: 15px;
+    }
+
+    .itensAlerta p{
+        font-size:8px;
+    }
+
+    .itensAlerta input[type = button]{
+        width: 100px;
+    }
+}

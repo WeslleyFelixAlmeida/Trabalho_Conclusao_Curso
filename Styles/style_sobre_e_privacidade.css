@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    background-color: #460505;
+    height: fit-content;
+    padding: 20px;
+}
+
+#ir_para_home{
+    cursor: pointer;
+}
+
+main, .container_central{
+    height: 100%;
+    width: 100%;
+    background-color: #cbcbcb;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 150px;
+    height: 80px;
+    margin-left: 30px;
+}
+
+.centro_main{
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.centro_main > a {
+    color: #460505;
+    font-weight: 500;
+}
+
+.centro_main > a:visited {
+    color: #460505;
+}
+
+/*Footer*/
+footer{
+    background-color: #460505;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.links_footer_container{
+    width: 30%;      
+    padding: 10px;
+}
+
+.links_footer{
+    columns: 2;
+}
+
+.links_footer > li{
+    list-style: none;
+    padding: 5px;
+}
+
+.links_footer > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright_texto{
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 720px){
+    .links_footer_container{
+        width: 50%;      
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .links_footer_container{
+        width: 70%;      
+        padding: 10px;
+    }
+}

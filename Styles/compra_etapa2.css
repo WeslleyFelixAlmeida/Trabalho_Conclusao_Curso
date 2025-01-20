@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Header*/
+header{
+    width: 100%;
+    height: fit-content;
+}
+
+.container_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: #460505;
+}
+
+.header_esquerda, .header_direita{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header_direita{
+    justify-content: space-around;
+}
+
+.container_logo{
+    width: 190px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width: 150px;
+    height: 80px;
+}
+
+.container_barra{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#barra_pesquisa{
+    width: 60%;
+    height: 20px;
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+    padding: 10px;    
+}
+
+#barra_pesquisa:focus{
+    outline: none;
+}
+
+#img_lupa{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 0px 2px 2px 0px;
+}   
+
+#img_lupa:hover{
+    cursor: text;
+}
+
+#barra_pesquisa::placeholder{
+    opacity: 40%;
+}
+
+.container_carrinho, .container_perfil{
+    width: fit-content;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_perfil a{
+    color: white;
+    text-decoration: none;
+}
+
+.container_perfil:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.perfil_link, .login_link{
+    display: flex;
+    align-items: center;
+}
+
+
+#perfil_icone, #carrinho_icone{
+    width: 45px;
+    height: 45px;
+}
+
+.categorias{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 5px 1px;
+}
+
+.categorias_esquerda, .categorias_direita{
+    width: 20%;
+    height: fit-content;
+}
+
+.categorias_container{
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.categorias_container a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.categorias_container a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.categorias_container a:hover{
+    color: black;
+    background-color: rgb(192, 192, 192);
+}
+
+/*Main*/
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.container_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 10px;
+}
+
+.container_escolha_pagamento{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_elementos_escolha{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3px;
+}
+
+/*Pagamento cartão*/
+.escolha_pagamento_cartao{
+    border: solid 1px #460505;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px;
+}
+
+.escolha_pagamento_cartao > form > p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.escolha_pagamento_boleto{
+    border: solid 1px #460505;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.escolha_pagamento_boleto > form > p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dados_cartao{
+    display: flex;
+    flex-direction: column;
+}
+
+.dados_cartao_top, .dados_cartao_inf{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linhas_dados{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.linhas_dados > p{
+    font-size: 12px;
+    color: red;
+}
+
+.linhas_dados > input[type = text]{
+    border: solid 1px #460505;
+    border-radius: 3px;
+    height: 30px;
+    padding: 3px;
+}
+
+.linhas_dados > input[type = date]{
+    border: solid 1px #460505;
+    border-radius: 3px;
+    height: 30px;    
+    padding: 3px;
+}
+
+/*Pagamento boleto*/
+
+.itens_linha_boleto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.itens_linha_boleto > input[type = text],.itens_linha_boleto > input[type = date]{
+    height: 30px;
+    border: solid 1px #460505;
+    border-radius: 3px;
+    padding: 3px
+}
+
+.linha_topo_boleto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.linha_inf_boleto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#cpf_comprador{
+    width: 150px;
+}
+
+#nome_comprador{
+    width: 350px;
+}
+
+#dataNasc_comprador{
+    width: 110px;
+}
+
+#email_comprador{
+    width: 350px;
+}
+
+
+
+/*Outros*/
+.botoes{
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoes > input[type = button]{
+    background-color: #460505;
+    color: white;
+    width: 150px;   
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type = button]:hover{
+    background-color: #023047;
+}
+
+#numero_cartao{
+    width: 250px;
+}
+#nome_cartao{
+    width: 300px;
+}
+#dataVenc_cartao{
+    width: 110px;
+}
+#cvv_cartao{
+    width: 50px;
+}
+
+.checagem_cartao{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3px;
+    margin: 5px;
+}
+
+/*Footer*/
+footer{
+    background-color: #460505;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.links_footer_container{
+    width: 30%;      
+    padding: 10px;
+}
+
+.links_footer{
+    columns: 2;
+}
+
+.links_footer > li{
+    list-style: none;
+    padding: 5px;
+}
+
+.links_footer > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright_texto{
+    text-align: center;
+    color: white;
+}
+
+/*Estilo de vericação dos inputs*/
+.Correto{
+    border-color: #008000 !important;
+}
+
+.Incorreto{
+    border-color: #ff0000 !important;
+}
+
+.ativado{
+    opacity: 100%;
+}
+
+.desativado{
+    opacity: 40%;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .container_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px;
+        background-color: #460505;
+    }
+
+    .header_direita {
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .container_main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        /* padding: 10px; */
+    }
+
+    .container_escolha_pagamento {
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+    }
+
+    .container_elementos_escolha {
+        display: flex;
+        flex-direction: row;
+        column-gap: 3px;
+    }
+
+    .escolha_pagamento_cartao {
+        border: solid 1px #460505;
+        margin: 10px 0px;
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px 0px;
+    }
+
+    .dados_cartao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dados_cartao_top, .dados_cartao_inf {
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .checagem_cartao {
+        /* display: flex; */
+        /* flex-direction: row; */
+        column-gap: 3px;
+        margin: 5px;
+    }
+
+    .linhas_dados {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #numero_cartao {
+        width: 70%;
+    }
+
+    .linhas_dados > input[type = text] {
+        border: solid 1px #460505;
+        border-radius: 3px;
+        height: 30px;
+        padding: 3px;
+    }
+
+    #nome_cartao {
+        width: 100%;
+    }
+
+    .linhas_dados > input[type = text] {
+        border: solid 1px #460505;
+        border-radius: 3px;
+        height: 30px;
+        padding: 3px;
+    }
+
+    .dados_cartao_top, .dados_cartao_inf {
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .linhas_dados {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #dataVenc_cartao {
+        width: 110px;
+    }
+
+    .linhas_dados > input[type = date] {
+        border: solid 1px #460505;
+        border-radius: 3px;
+        height: 30px;
+        padding: 3px;
+    }
+
+    #cvv_cartao {
+        width: 50px;
+    }
+
+    .linhas_dados > input[type = text] {
+        border: solid 1px #460505;
+        border-radius: 3px;
+        height: 30px;
+        padding: 3px;
+    }
+
+    .escolha_pagamento_boleto {
+        border: solid 1px #460505;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+
+    .linha_topo_boleto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .itens_linha_boleto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #cpf_comprador {
+        width: 70%;
+        max-width: 300px;
+    }
+
+    #nome_comprador {
+        width: 80%;
+    }
+
+    .linha_inf_boleto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #email_comprador {
+        width: 80%;
+    }
+
+    .botoes > input[type = button] {
+        background-color: #460505;
+        color: white;
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    /*footer*/
+    .links_footer_container {
+        width: 70%;
+        padding: 10px;
+        max-width: 450px;
+    }
+
+    .links_footer > li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+    }
+}
